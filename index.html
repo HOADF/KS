@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профессиональный монтаж и продажа кондиционеров | Климат-Сервис</title>
+    <meta name="description" content="Профессиональный монтаж и продажа бытовых кондиционеров. Гарантия качества. Быстрый выезд мастера. Доступные цены.">
+    <meta name="keywords" content="монтаж кондиционеров, установка кондиционеров, купить кондиционер, обслуживание кондиционеров, сплит-системы">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset и базовые стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #0066cc;
+            --secondary: #0099ff;
+            --accent: #ff6600;
+            --light: #f5f9ff;
+            --dark: #1a2b40;
+            --text: #333333;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            color: var(--text);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Кнопки */
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background: #e55a00;
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(255, 102, 0, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .logo-text span {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+        
+        .contact-header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        
+        .phone {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .callback {
+            font-size: 14px;
+            color: var(--accent);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3') no-repeat center center/cover;
+            padding: 160px 0 100px;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        /* Features */
+        .features {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        /* Catalog */
+        .catalog {
+            padding: 80px 0;
+        }
+        
+        .categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .category-btn {
+            padding: 10px 20px;
+            background: var(--light);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        
+        .category-btn.active, .category-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-img {
+            height: 200px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 3rem;
+        }
+        
+        .product-content {
+            padding: 20px;
+        }
+        
+        .product-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .product-price {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .product-features {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+        
+        .product-features li {
+            margin-bottom: 5px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .product-features li:before {
+            content: "✓";
+            color: var(--accent);
+            margin-right: 8px;
+            font-weight: bold;
+        }
+        
+        /* Services */
+        .services {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 80px 0;
+        }
+        
+        .accordion {
+            margin-top: 30px;
+        }
+        
+        .accordion-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .accordion-header {
+            background: white;
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .accordion-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: white;
+        }
+        
+        .accordion-content.active {
+            padding: 20px;
+            max-height: 300px;
+        }
+        
+        /* CTA */
+        .cta {
+            background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.9)), url('https://images.unsplash.com/photo-1611330556125-8c4d8c51185b?ixlib=rb-4.0.3') no-repeat center center/cover;
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+        
+        /* Contact */
+        .contact {
+            padding: 80px 0;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-info h3 {
+            color: var(--dark);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-details p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-details i {
+            margin-right: 10px;
+            color: var(--primary);
+            width: 20px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .contact-header {
+                align-items: center;
+                margin-top: 15px;
+            }
+            
+            .hero {
+                padding: 130px 0 60px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-text">Климат<span>Сервис</span></div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#main">Главная</a></li>
+                        <li><a href="#catalog">Каталог</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#about">О компании</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="contact-header">
+                    <a href="tel:+78001234567" class="phone">+7 (800) 123-45-67</a>
+                    <a href="#callback" class="callback">Заказать звонок</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="main">
+        <div class="container">
+            <h1>Профессиональный монтаж и продажа кондиционеров</h1>
+            <p>Обеспечим комфортную температуру в вашем доме и офисе. Гарантия качества и лучшие цены на рынке.</p>
+            <div class="hero-buttons">
+                <a href="#catalog" class="btn">Выбрать кондиционер</a>
+                <a href="#contacts" class="btn btn-outline">Вызвать мастера</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Почему выбирают нас</h2>
+                <p>Более 10 лет мы обеспечиваем комфортный климат в домах и офисах наших клиентов</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Профессиональный монтаж</h3>
+                    <p>Опытные мастера с профессиональным оборудованием выполнят монтаж любой сложности</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Гарантия 3 года</h3>
+                    <p>Предоставляем extended гарантию на все работы и оборудование</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Быстрая доставка</h3>
+                    <p>Доставим оборудование в день заказа или на следующий день</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-ruble-sign"></i>
+                    </div>
+                    <h3>Лучшие цены</h3>
+                    <p>Прямые поставки от производителей позволяют предлагать лучшие цены</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Каталог кондиционеров</h2>
+                <p>Широкий выбор сплит-систем от ведущих производителей</p>
+            </div>
+            <div class="categories">
+                <button class="category-btn active">Все</button>
+                <button class="category-btn">Бюджетные</button>
+                <button class="category-btn">Средний класс</button>
+                <button class="category-btn">Премиум</button>
+                <button class="category-btn">Инверторные</button>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Ballu BSVP-07HN1</h3>
+                        <div class="product-price">24 990 ₽</div>
+                        <ul class="product-features">
+                            <li>Площадь до 20 м²</li>
+                            <li>Инверторный компрессор</li>
+                            <li>Класс энергоэффективности A++</li>
+                            <li>Wi-Fi управление</li>
+                        </ul>
+                        <a href="#order" class="btn">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">LG Dual Cool P09EP</h3>
+                        <div class="product-price">32 500 ₽</div>
+                        <ul class="product-features">
+                            <li>Площадь до 25 м²</li>
+                            <li>Инверторный компрессор</li>
+                            <li>Низкий уровень шума</li>
+                            <li>Автоочистка</li>
+                        </ul>
+                        <a href="#order" class="btn">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Daikin FTXB20C</h3>
+                        <div class="product-price">56 790 ₽</div>
+                        <ul class="product-features">
+                            <li>Площадь до 20 м²</li>
+                            <li>Энергопотребление класс A+++</li>
+                            <li>Тихая работа (19 дБ)</li>
+                            <li>Система очистки воздуха</li>
+                        </ul>
+                        <a href="#order" class="btn">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Tadiran AC60</h3>
+                        <div class="product-price">41 300 ₽</div>
+                        <ul class="product-features">
+                            <li>Площадь до 18 м²</li>
+                            <li>Ионный фильтр</li>
+                            <li>Самодиагностика</li>
+                            <li>Ночной режим</li>
+                        </ul>
+                        <a href="#order" class="btn">Заказать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наши услуги</h2>
+                <p>Полный комплекс услуг по климатическому оборудованию</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Монтаж кондиционеров</h3>
+                    <p>Профессиональная установка сплит-систем с соблюдением всех технических норм и требований</p>
+                    <p class="product-price">от 5 000 ₽</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-toolbox"></i>
+                    </div>
+                    <h3>Обслуживание</h3>
+                    <p>Регулярное техническое обслуживание для бесперебойной работы вашего оборудования</p>
+                    <p class="product-price">от 2 500 ₽</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-fill-drip"></i>
+                    </div>
+                    <h3>Заправка хладагентом</h3>
+                    <p>Заправка фреоном с проверкой герметичности системы и контролем давления</p>
+                    <p class="product-price">от 1 800 ₽</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Ремонт</h3>
+                    <p>Качественный ремонт любой сложности с гарантией на выполненные работы</p>
+                    <p class="product-price">от 1 500 ₽</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Часто задаваемые вопросы</h2>
+                <p>Ответы на самые популярные вопросы о выборе и установке кондиционеров</p>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Какой кондиционер выбрать для квартиры? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Для квартиры лучше всего подходят сплит-системы инверторного типа. Они экономичны, работают тихо и поддерживают точную температуру. Мощность следует выбирать из расчета 1 кВт на 10 м² помещения.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Сколько времени занимает установка кондиционера? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Стандартный монтаж сплит-системы занимает от 3 до 5 часов. Время может увеличиться при необходимости прокладки длинных трасс или выполнении дополнительных работ (алмазное бурение, работы на высоте).</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Как часто нужно обслуживать кондиционер? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Профилактическое обслуживание рекомендуется проводить 1-2 раза в год. Перед началом сезона эксплуатации и после него. Регулярное обслуживание продлевает срок службы оборудования и сохраняет его эффективность.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Нужна консультация специалиста?</h2>
+            <p>Оставьте заявку и наш инженер бесплатно подберет для вас оптимальное решение с учетом ваших потребностей и бюджета</p>
+            <a href="#contacts" class="btn">Получить консультацию</a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contacts">
+        <div class="container">
+            <div class="section-title">
+                <h2>Контакты</h2>
+                <p>Свяжитесь с нами удобным для вас способом</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Наши контакты</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Примерная, д. 123</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+78001234567">+7 (800) 123-45-67</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@klimat-service.ru">info@klimat-service.ru</a></p>
+                        <p><i class="fas fa-clock"></i> Пн-Пт: 9:00-20:00, Сб-Вс: 10:00-18:00</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Оставить заявку</h3>
+                    <form>
+                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="tel" placeholder="Ваш телефон" required>
+                        <input type="email" placeholder="Ваш e-mail">
+                        <textarea placeholder="Сообщение"></textarea>
+                        <button type="submit" class="btn">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>КлиматСервис</h3>
+                    <p>Профессиональный монтаж и обслуживание кондиционеров в Москве и области. Работаем с 2010 года.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="#">Установка кондиционеров</a></li>
+                        <li><a href="#">Обслуживание кондиционеров</a></li>
+                        <li><a href="#">Ремонт кондиционеров</a></li>
+                        <li><a href="#">Заправка фреоном</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Каталог</h3>
+                    <ul>
+                        <li><a href="#">Бюджетные кондиционеры</a></li>
+                        <li><a href="#">Кондиционеры среднего класса</a></li>
+                        <li><a href="#">Премиум кондиционеры</a></li>
+                        <li><a href="#">Инверторные сплит-системы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><a href="tel:+78001234567">+7 (800) 123-45-67</a></li>
+                        <li><a href="mailto:info@klimat-service.ru">info@klimat-service.ru</a></li>
+                        <li>г. Москва, ул. Примерная, д. 123</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 КлиматСервис. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Аккордеон для FAQ
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                content.classList.toggle('active');
+                
+                const icon = header.querySelector('i');
+                if (content.classList.contains('active')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+        
+        // Фильтрация товаров
+        document.querySelectorAll('.category-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.category-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                button.classList.add('active');
+                
+                // Здесь будет код фильтрации товаров
+                // В реальном проекте нужно добавить логику фильтрации
+            });
+        });
+    </script>
+</body>
+</html>
