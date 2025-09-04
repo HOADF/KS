@@ -21,6 +21,7 @@
             color: var(--text);
             line-height: 1.6;
             background-color: #ffffff;
+            padding-top: 80px;
         }
         
         .container {
